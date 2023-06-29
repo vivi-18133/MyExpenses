@@ -24,3 +24,8 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Upload generated apk
+      uses: actions/upload-artifact@v1
+      with:
+        name: myExpenses-release.apk
+        path: myExpenses/build/outputs/apk/release/
